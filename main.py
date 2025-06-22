@@ -8,7 +8,7 @@ url = 'https://horo.mail.ru/prediction/cancer/tomorrow/'  # Замени на р
 # Отправляем запрос на сайт
 response = requests.get(url)
 
-TOKEN = '8178967594:AAE14G4kmVksV-Y3oyZNBQkxe98JDYQgzws'
+TOKEN = '7722533303:AAGkV0WauU6r0UBgqYoxnStWZtoRkxE25tQ'
 CHAT_ID = '1163463444'
 
 # Функция для отправки сообщения
