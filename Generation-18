@@ -7,4 +7,8 @@ Generation-18
 if flag == True:
 программисты обычно пишут код:
 
+if not flag:
+Примечание 2. Операторы and и or ленивые:
+- 
+
 if flag:
