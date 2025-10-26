@@ -2,4 +2,53 @@ Generation-20
 
 Функции, возвращающие булево значение
 
-Мы можем создавать функции,
+Мы можем создавать функции, возвращающие булевы значения (True или False). Такая практика очень полезна. Напишем функцию is_even(), принимающую
+одно число и возвращающую значение True, если переданное число четное, или False в противном случае:
+
+def is_even(num):
+  return num%2==0
+
+Приведенный ниже код:
+
+print(is_even(8))
+print(is_even(7))
+
+Выводит
+True
+False
+
+В проограммировании функция, которая возвращает значение True или False, называется предикатом.
+
+Функция isinstance()
+
+В языке Python имеется встроенная функция isinstance() для проверки соответствия типа объекта какому-либо типу данных.
+
+Приведенный ниже код:
+
+print(isinstance(3, int))
+print(isinstance(3.5, float))
+print(isinstance('Beegeek', str))
+print(isinstance([1,2,3], list))
+print(isinstance(True, bool))
+
+Выводит
+True
+True
+True
+True
+True
+
+Число 3 - целое число, число 3.5 - вещественное число, 'Beegeek' - строка и так далее.
+
+Приведенный ниже код:
+
+print(isinstance(3.5, int))
+print(isinstance('Beegeek', float))
+
+выводит
+False
+False
+
+так как число 3.5 - не целое (float - не int), 'Beegeek' - строка, а не вещественное число (str - не float)
+
+
