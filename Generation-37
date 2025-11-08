@@ -8,4 +8,4 @@ Generation-37
 my_list = [[1,9,8,7,4], [7,3,4], [2,1]]
 
 total = 0
-for i in range(len())
+for i in range(len(my_list))
