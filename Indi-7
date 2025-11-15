@@ -1,0 +1,29 @@
+Indi-7
+
+Дзен python
+
+Python - настолько крут, что у него есть своя философия или дзен
+
+Хотите на него взглянуть? Конечно хотите! Для этого откройте IDLE и в интерактивном режиме наберите команду
+import this
+
+и вся тайна этой философии откроется перед вами. Вы должны будете увидеть следующий текст:
+
+The Zen of Python, by Tim Peters
+
+Beautiful is netter than ugly
+Explicit is better than implicit
+Simple is better than complex
+Complex is better than complicated
+Flat is better than dense
+Readability counts.
+Special cases aren't special enough to break the rules
+Although practicality beats purity
+Errors should never pass silently
+Unless axplicity silenceed
+In the face of ambiuity, refuse the temptation to guess
+There should be one - and preferably only one - obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch
+Now is better than never
+Although never is often better than *right* now.
+if the imple
