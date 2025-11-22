@@ -22,3 +22,9 @@ languages = ('Python','C#','C++','Java')
 
 print(len(numbers)) # выводим длину кортежа numbers
 print(len(langauges)) #выводим 
+print(len(('apple','banana','cherry'))) #выводим длину кортежа, состоящего из 3 элементов
+
+выведет:
+5
+4
+3
