@@ -31,4 +31,30 @@ print('Максимальный элемент кортежа = ', max(numbers))
 Таким образом, в метод передается один параметр:
 - value: значение, индекс которого требуется найти
 
-Если 
+Если элемент в кортеже не найден, то во время выполнения происходит ошибка.
+
+Следующий программный код:
+names = ('Gvido', 'Roman', 'Timur')
+position = names.index('Timur')
+print(position)
+
+выведет:
+2
+
+Следующий программный код:
+names = ('Gvido', 'Roman', 'Timur')
+position = names.index('Andres')
+print(position)
+
+приводит к ошибке:
+ValueError: tuple.index(x): x not in tuple
+
+Чтобы избежать таких ошибок, можно использовать метод index() вместе с оператором принадлежности in:
+
+names = ('Gvido', 'Roman', 'Timur')
+
+if 'Andres' in names:
+  position = names.index('Andres')
+  print(position)
+else:
+  print('Такого значения нет в кортеже')
