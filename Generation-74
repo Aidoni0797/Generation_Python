@@ -121,4 +121,13 @@ print(surname)
 Приведенный ниже код:
 singer = ('Freddie', 'Bohemian Rhapsody', 'Killer Queen', 'Love of my life', 'Mercury')
 
-names, *songs
+names, *songs, surname = singer
+
+print(name)
+print(songs)
+print(surname)
+
+выводит:
+Freeddie
+['Bemian Rhapsody', 'Killer Queen', 'Love of my life']
+Mercury
