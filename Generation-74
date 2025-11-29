@@ -7,3 +7,20 @@ Generation-74
 Приведенный ниже код:
 colors = ('red', 'green', 'blue', 'cyan')
 (a,b,c,d) = colors
+
+print(a)
+print(b)
+print(c)
+print(d)
+
+выводит:
+
+red
+green
+blue
+cyan
+
+В приведенном примере кортеж colors распаковывается в переменные a,b,c,d.
+
+Мы можем опустить скобки слева от знака равенства:
+colors = ('red','green','blue',)
