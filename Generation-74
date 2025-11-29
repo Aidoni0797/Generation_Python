@@ -26,4 +26,21 @@ cyan
 colors = ('red','green','blue','cyan')
 a,b,c,d = colors
 
-Количество переменных должно совпадать
+Количество переменных должно совпадать с числом элементов в кортеже.
+
+Пприведенный ниже код:
+colors = ('red','green','blue','cyan')
+a,b = colors
+
+приводит к ошибке:
+ValueError: too many values to unpack
+
+Аналогично, приведенный ниже код:
+
+colors = ('red', 'green', 'blue')
+a,b,c,d = colors
+
+приводит к ошибке:
+ValueError: not enough values to unpack(expected4.got3)
+
+Однако
