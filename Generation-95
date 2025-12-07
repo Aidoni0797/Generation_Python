@@ -1,0 +1,7 @@
+Generation-95
+Тема урока: методы множеств
+1. Методы union(), intersection(), difference(), symmetric_differece()
+2. Методы update(), intersection_update(), difference_update(), symmetric_difference_update()
+3. Операторы &, |, -, ^
+
+Аннотация. Урок посвящен методам множеств
