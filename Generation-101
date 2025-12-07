@@ -35,4 +35,10 @@ True
 
 Приведенный ниже код:
 
-set1 = {'a','b',}
+set1 = {'a','b','c','d','e'}
+set2 = {'c', 'e'}
+print(set1.issuoerset(set2))
+выводит:
+True
+
+
