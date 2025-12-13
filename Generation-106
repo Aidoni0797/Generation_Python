@@ -1,0 +1,43 @@
+Generation-106
+
+Примечания
+
+Примечание1. Будучи изменяемыми, обычные можества не могут быть элементами других множеств. Замороженные множества являются неизменяемыми, а значит могут быть элементами других множеств.
+
+Приведенный ниже код:
+
+sentence = 'The cat in the hat had two sidekicks, thing one and thing two.'
+words = sentence.lower().replace('.','').replace('.','').split()
+vowels=['a','e','i','o','u']
+consonants = {frozenset({letter for letter in word if letter not in vowels}) for word in words}
+print(*consonants, sep="\n")
+
+выводит (порядок элементов может отличаться):
+frozenset({'d','h'})
+frozenset({'h','t'})
+frozenset({'n','h', 'g', 't'})
+frozenset({'n'})
+frozenset({'c','t'})
+frozenset({'n','d'})
+frozenset({'w','t'})
+frozenset({'s','c', 'k', 'd'})
+
+Примечание 2. Методы, изменяющие множество, отсутствуют у замороженных множеств:
+- add()
+- remove()
+- discard()
+- pop()
+- clear()
+- update()
+- intersection_update()
+- difference_update()
+- symmetric_difference_update()
+
+Примечание 3. Мы можем сравнивать простые (тип set) и замооженные множества (тип frosent).
+Приведенный ниже код:
+myset1 = set('qwerty')
+myset2 = frozenset('qwerty')
+print(myset1 == myset2)
+
+выведет:
+True
