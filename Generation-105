@@ -8,4 +8,18 @@ Generation-105
 - разность множеств: метод difference() или оператор - ;
 - симметрическая разность множеств: метод symmetric_difference() или оператор ^.
 
-Приведенный 
+Приведенный ниже код:
+
+myset1 = frozenset('hello')
+myset2 = frozenset('world')
+
+print(myset1 | myset2)
+print(myset1 & myset2)
+print(myset1 ^ myset2)
+
+выводит:
+frozenset({'l', 'w', 'e', 'h', 'r', 'd', 'o'})
+frozenset({'l', 'o'})
+frozenset({'d', 'h', 'w', 'e', 'r'})
+
+Результатом операций над замороженными множествами будут тоже замороженные множества.
