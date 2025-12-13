@@ -9,4 +9,14 @@ Frozenset
 
 Приведенный ниже код:
 myset1 = frozenset({1,2,3}) # на основе множества
-myset2 = frozenset([1,1,2,3,4,4,4,5,6,6]) # на
+myset2 = frozenset([1,1,2,3,4,4,4,5,6,6]) # на основе списка
+myset3 = frozenset('aabcccddee') # на основе строки
+
+print(myset1)
+print(myset2)
+print(myset3)
+
+выодит:
+frozenset({1,2,3})
+frozenset({1,2,3,4,5,6})
+frozenset({'e', 'd', 'c', 'b', 'a'})
