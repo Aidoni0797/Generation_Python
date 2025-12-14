@@ -133,4 +133,35 @@ info = dict(name='Timur', age=28, job='Teacher')
 info_list = [('name','Timur'), ('ages', 28), ('job', 'Teacher')] # кортеж списков
 info_dict = dict(info_tuple) # создаем словарь на основе кортежа списков.
 
-Если необходимо 
+Если необходимо создать словарь, каждому ключу кторого соответствует одно и то же значение, можно воспользоваться методом
+fromkeys().
+
+Приведенный ниже код:
+dict1 = dict.fromkeys(['name','age','job'], 'Missed information')
+создает словарь с тремя элементами, где ключи - строки 'name','age','job', а соответствующие им значения: 'Missed information',
+'Missed information', 'Missed information'.
+
+Если методу fromkeys() не передать второй параметр, то по умолчанию присваивается значение None.
+
+Приведенный ниже код:
+dict1 = dict.fromkeys(['name','age','job'])
+создает словарь с тремя элементами, в которых ключи - строки 'name', 'age', 'job', а значение - None, None, None.
+
+Пустой словарь
+
+Пустой словарь можно создать двумя способами:
+- с помощью пустых фигурных скобок;
+- с помощью функции dict().
+
+Приведенный ниже код:
+dict1 = {}
+dict2 = dict()
+print(dict1)
+print(dict2)
+print(type(dict1))
+print(type(dict2))
+создает два пустых словаря и выводит:
+{}
+{}
+<class 'dict'>
+<class 'dict'>
