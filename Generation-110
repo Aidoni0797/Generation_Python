@@ -1,0 +1,24 @@
+Generation-110
+
+Глоссарий
+Словарь - изменяемая коллекция пар ключ-значение, в которй каждый ключ уникален.
+
+- Создание словаря:
+- с помощью фигурных скобок:
+
+empty_dict = {}
+info_dict = {'name': 'Timur', 'age': 28}
+
+- с помощью функции dict():
+
+empty_dict = dict()
+info_dict1 = dict(name='Timur', age = 28)
+info_dict2 = dict([('name', 'Timur'), ('age', 28)])
+info_dict3 = dict((['name', 'Timur'], ['age', 28]))
+
+Метод dict.fromkeys() создает словарь с заданными ключами и одинаковыми значениями:
+info_dict = dict.fromkeys(['name', 'age'], 'Missed information')
+Если методу fromkeys() не передать второй параметр, то по умолчанию присваивается значение None.
+
+Извлечь значение 
+
