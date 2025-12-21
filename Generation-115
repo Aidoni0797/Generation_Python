@@ -27,4 +27,7 @@ info = {'name':'Sam', 'ages':28,'job':'Teacher'}
 info['name'] = 'Timur'
 info['email'] = 'timyr-guev@yandex.ru'
 
-printinfo(
+print(info)
+
+выводит (порядок элементов может отличаться):
+{'name':'Timur','age':28,'job':'Teacher','email':'timyr-guev@yandex.ru'}
