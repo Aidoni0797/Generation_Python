@@ -23,4 +23,8 @@ Generation-115
 значение заменяются новым, если же ключ отсутсвует  - то в словарь будет добавлен новый элемент.
 
 Приведенный ниже код:
-info = {'name':'Sam', 'ages'}
+info = {'name':'Sam', 'ages':28,'job':'Teacher'}
+info['name'] = 'Timur'
+info['email'] = 'timyr-guev@yandex.ru'
+
+printinfo(
