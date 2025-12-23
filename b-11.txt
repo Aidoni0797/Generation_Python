@@ -1,0 +1,33 @@
+Задача: Улучшение обнаружения мошенничества в финансовых операциях.
+
+1. Анализ данных:
+- Использование TensorFlow для обучения модели, которая анализирует транзакции и определяет их как
+мошеннических и немошеннических транзакций, чтобы понять дисбаланс данных.
+
+python
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+#Предположим, fraud_data - это ваш набор данных с метками об мошеннических и немошеннических транзакциях
+#Визуализация распределения классов
+sns.countplot(x='Class', data = fraud_data)
+plt.titl('Distribution of Classes')
+plt.show()
+
+2. Отслеживание производительности модели:
+- Использование TensorBoard, инструмента для визуализации данных обучения модели в TensorFlow. Мы можем
+отслеживать метрики, такие как точность, потери и др., чтобы оценить производительности модели.
+
+python
+
+from tensorflow.keras.callbacks import TensorBoard
+#Создание TensorBoard коллбэка
+tensorboard_callback = TensorBoard(log_dir='./logs')
+#Обучение модели с использованием коллбэка
+model.fit(X_train, y_train, epochs=10, validaton_data=(X_val, y_val), callbacks=[tensorboard_callback])
+
+Далее, мы могли бы открыть TensorBoard в веб-браузере и визуализировать кривые обучения, гистограммы весов
+и другие метрики.
