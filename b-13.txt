@@ -1,0 +1,24 @@
+Где взять датасеты:
+Существует множество ресурсов, где вы можете найти разнообразные датасеты для использования в ваших проектах.
+1.Kaggle: [Kaggle](https://www.kaggle.com/datasets) является одним из крупнейших ресурсов для научных данных.
+Здесь вы найдете тысячи датасетов, соревнований и сообщества для обмена идеями и опытом.
+2. UCI Machine Learning Repository: [UCI ML Repository] (https://archive.ics.uci.edu/ml/index.php)
+предоставляет широкий спектр датасетов, подходящих для задач машинного обучения. Эта старый, но надежный
+ресурс.
+3. Google Dataset Search: [Google Dataset Search] (https://datasetsearch.research.google.com/) - 
+это инструмент от Google, который помогает находить датасеты по всемы вебу.
+4. AWS Public Datasets: [AWS Public Datasets] (https://registry.opendata.aws/) - это коллекция общедоступных
+датасетов, предоставляемых Amazon Web Services.
+5. Open Data Portals: Многие страны и города предоставляют открытые порталы данных с различными наборами
+данных. Например, [data.gov] (https://www.data.gov/) (США), [data.gov.uk] (https://data.gov.uk/)
+(Великобритания), [data.europa.eu] (https://data.europa.eu/) (Европейский союз)
+6. Reddit Datasets Subreddit: [r/datasets] (https://www.reddit.com/r/datasets/) - это сообщество на
+Reddit, где пользователи делятся ссылками на интересные датасеты.
+7. Awesome Datasets GitHub Repository: [Awesome Datasets] (https://github.com/awesomedata/awesome-public-datasets)
+это Github репозиторий, содержащий список замечательных общедоступных датасетов.
+8. Machine Learning  Repository by OpenAI: [OpenAI Datasets] (https://platform.openai.com/docs/datasets) -
+OpenAI предоставляет доступ к своим датасетам.
+9. COVID-19 Datasets: [COVID-19 Datasets] (https://github.com/datasets/covid-19) - наборы данных, связанные с
+пандемией COVID-19.
+Помните, что при использовании датасетов важно следить за лицензиями и правилами использования, указанными
+на сайтах, с которых вы загружаетет данные.
