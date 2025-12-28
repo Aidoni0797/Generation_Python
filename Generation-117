@@ -121,3 +121,115 @@ Teacher
 surname = info.pop('surname', None)
 
 Если ключа surname в словаре нет, то в переменной surname будет храниться значение None.
+
+Метод popitem()
+
+Метод popitem() удаляет из словаря последний добавленный элемент и возвращает удаляемый элемент в виде кортежа (ключ, значение).
+
+Приведенный ниже код:
+info = {
+  'info': 'Bob',
+  'age': 25,
+  'job': 'Dev'
+}
+info['surname'] = 'Sinclar'
+
+item = info.popitem()
+
+print(item)
+print(info)
+
+выводит:
+{'surname', 'Siclar'}
+{'name': 'Bob', 'age': 25, 'job': 'Dev'}
+
+В версиях Python ниже 3.6 метод popitem() удалял случайный элемент.
+
+Метод clear()
+
+Метод clear() удаляет все элементы из словаря.
+Приведенный ниже код:
+info = {
+  'name': 'Bob',
+  'age': 25,
+  'job': 'Dev'
+}
+info.clear()
+
+print(info)
+выводит:
+{}
+
+Метод copy()
+
+Метод copy() создает поверхностную покию словаря.
+
+Приведенный ниже код:
+info = {
+  'name': 'Bob',
+  'age': 25,
+  'job': 'Dev'
+}
+info_copy = info.copy()
+print(info_copy)
+выводит:
+{'name': 'Bob', 'age: 25, 'job':'Dev'}
+Не стоит путать копирование словаря (метод copy()) и присвоение новой переменной ссылки на старый словарь.
+
+Приведенный ниже код:
+info = {
+  'name': 'Bob',
+  'age': 25,
+  'job': 'Dev'
+}
+
+new_info = info
+new_info['name'] = 'Tim'
+
+print(info)
+
+выводит:
+{'name': 'Tim', 'age': 25, 'job': 'Dev'}
+
+Оператор присваивания (=) не копирует словарь? а лишь присваивает ссылку на старый словарь новой переменной№
+
+Таким образом? когда мы изменяем словарь new_info, меняется и словарь info. Если необходимо изменить один словарь, не изменяя второй, используют метод copy().
+
+Приведенный ниже код:
+info = {'name': 'Bob',
+  'age': 25,
+  'job': 'Dev'}
+
+new_info = info.copy()
+new_info['name'] = 'Tim'
+
+print(info)
+print(new_info)
+
+выводит:
+{'name':'Bob', 'age':25,'job':'Dev'}
+{'name':'Tim', 'age':25,'job':'Dev'}
+
+Примечания
+
+Примечание 1. Словарь можно использовать вместо нескольких вложенный условий, если вам нужно проверить число на равенство. Напрмиер вместо:
+
+num = int(input())
+
+if num ==1:
+  description = 'One'
+elif num==2:
+  description = 'Two'
+elif num==3:
+  description = 'Three'
+else:
+  description = 'Unknown'
+
+print(description)
+
+можно написать:
+num = int(input())
+description = {1:'One', 2:'Two',3:'Three'}
+print(description.get(num, 'Unknown'))
+
+На практике такой код встречается достаточно часто,особенно если в программе необходимо часто осуществлять проверку указанного типа.
