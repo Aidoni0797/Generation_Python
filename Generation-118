@@ -36,4 +36,4 @@ dct.popitem()
 dct.clear()
 
 - Метод copy() создает повехностную копию словаря:
-dct_copy = dct
+dct_copy = dct.copy()
