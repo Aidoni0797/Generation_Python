@@ -46,3 +46,101 @@ info = dict(zip(ids, emp_info))
 Число уровне вложенности словарей неограниченно!
 
 Обращение к элементам вложенного словаря
+
+
+Для того чтобы получить значения определенных элементов во вложенном словаре, необходимо указать их ключи в нескольких квадратных скобках подобно тому, как мы получали значения во вложенных списках.
+
+Приведенный ниже код:
+info = {
+  'emp1': {'name':'Timur', 'job':'Teacher'},
+  'emp2': {'name':'Ruslan', 'job':'Developer'},
+  'emp3': {'name':'Rustam', 'job':'Tester'}
+}
+
+print(info['emp1']['name'])
+print(info['emp2']['job'])
+выводит:
+Timur
+Developer
+
+При попытке обращения по несуществующему кл.чу возникнет ошибка KeyError. Для того чтобы избежать возникновения такой ошибки, используйте словарный метод get(), который по умолчанию 
+возвращает значение None, если ключ отсутствует в словаре.
+
+Изменение вложенных словарей.
+
+Чтобы изменить значение определенного элемента во вложенном словаре, необходимо обратиться к его ключу и использовать оператор присвоения (=).
+
+Приведенный ниже код:
+
+info = {
+  'emp1': {'name':'Timur', 'job': 'Teacher'},
+  'emp2': {'name':'Ruslan', 'job': 'Developer'},
+  'emp3': {'name':'Rustam', 'job': 'Tester'}
+}
+
+info['emp1']['job'] = 'Manager'
+
+print(info['emp1'])
+
+выводит:
+{'name':'Timur', 'job':'Manager'}
+
+Итерация по вложенным словарям
+
+Итерации по вложенным словарям осуществляются как правило двумя циклами for (иногда достаточно одного цикла).
+
+Приведенный ниже код:
+
+info = {
+  'emp1': {'name':'Timur','job':'Teacher'},
+  'emp2': {'name':'Ruslan', 'job': 'Developer'},
+  'emp3': {'name': 'Rustam', 'job': 'Tester'}
+}
+
+for emp in info:    
+  print('Employee ID:', emp)
+  for key in info[emp]:
+    print(key+':',info[emp][key])
+  print()
+
+выводит:
+Employee ID: emp1
+name: Timur
+job: Teacher
+
+Employee ID: emp2
+name: Ruslan
+job: Developer
+
+Employee ID: emp3
+name: Rustam
+job: Tester
+
+Аналогичного результта можно было добиться с пмощью метода items():
+
+info = {
+  'emp1': {'name':'Timur', 'job': 'Teacher'},
+  'emp2': {'name':'Ruslan', 'job': 'Developer'},
+  'emp3': {'name': 'Rustam', 'job': 'Tester'}
+}
+
+for emp, inf in info.items():
+  print('Employee ID:', emp)
+  for key in inf:
+    print(key+':', inf[key])
+  print()
+
+Генераторы словарей
+
+Пусть требуется создать словарь, ключами которого будут числа от 0 до 5, а значениеями - квадраты ключей.
+Для создания требуемого словаря можно использовтаь код:
+squares = {}
+
+squares[0] = 0
+squares[1] = 1
+squares[2] = 4
+squares[3] = 9
+squares[4] = 16
+squares[5] = 25
+
+или 
