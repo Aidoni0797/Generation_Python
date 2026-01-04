@@ -62,4 +62,45 @@ print(random.sample(numbers,5))
 [9,2,8]
 [12,8,9,5,2]
 
-Количество 
+Количество случайных элементов не должно превышать длину исходного списка (строки). Следующий код:
+
+import random
+numbers = [2,5,8,9,12]
+print(random.sample(numbers,6))
+
+приведет к ошибке:
+ValueError: Sample larger than population or is negative
+
+Модуль string
+
+Встроенный модуль string раньше использовался для расширения стандартных возможностей (функционала) строкового типа данных str. На текущий момент все
+функции из модуля string переехали в методы строкового типа данных str,однако в модуле string остались удобные константные строки, которые можно использовать
+при решении задач.
+
+Приведенный ниже код:
+
+import string
+
+print(string.ascii_letters)
+print(string.ascii_uppercase)
+print(string.ascii_lowercase)
+print(string.digits)
+print(string.hexdigits)
+print(string.octdigits)
+print(string.punctuation)
+print(string.printable)
+
+выводит:
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz
+0123456789
+0123456789abcdefABCDEF
+01234567
+!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ \t\n\r\x0b\x0c
+
+Примечания
+
+Примечание 1. Помимо рассмотренных в уроке методов, модуль random содержит много дополнительных методов. Подробнее о модуле random можно почитать в документации.
+(https://docs.python.org/3/library/random.html#)
