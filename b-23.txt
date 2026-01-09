@@ -1,0 +1,51 @@
+Примеры фильтрации, группировки и объединения данных с Pandas
+
+Примеры фильтрации, группировки и объединения данных с бибилиотекой Pandas могут быть разнообразными, но давайте
+рассмотрим простой пример для каждого из этих методов.
+1. Фильтрация даных:
+Предположим, у вас есть DataFrame, представляющий данные о продажах, и вы хотите отфильтровать только те строки,
+где количество проданных товаров больше определенного значнеия, например 100:
+import pandas as pd
+filtered_sales = df[df['Quantity']>100]
+print(filltered_sales)
+
+2. Группировка данных:
+Вы можете использовать группировку для подсчета суммарных продаж по категориям:
+python
+
+category_sales = df.groupby('Category')['Quantity'].sum().reset_index()
+print(category_sales)
+
+3. Объединения данных:
+Предположим, у вас есть два DataFrame с данными о продажах из разных источников, и вы хотите объединить их
+по общему столбцу, например, 'Date':
+
+python
+merged_data = pd.merge(df1, df2, on='Date', how='inner')
+print(mrged_data)
+
+В этих примерах используются базовые функции Pandas для фильтрации, группировки и объединения данных. Вы можете
+адаптировать эти методы в зависимости от конкретных требований и структуры ваших данных.
+
+Рассмотрим еще один пример использования:
+python 
+import pandas as pd
+data={
+'Date':['2022-06-01','2022-06-02','2022-06-03','2022-07-01','2022-07-02'],
+'Region':['North','South','North','South','East'],
+'Quantity':[150,220,180,210,190],
+}
+df = pd.DataFrame(data)
+filtered_sales = df[(df['Date'].str.startswith('2022-06'))&(df['Quantity']>200)]
+region_sales = df.groupby('Region')['Quantity'].sum().reset_index()
+population_data = {
+'Region':['North', 'South', 'East'],
+'Population': [5000000,7000000,3000000],
+}
+population_df = pd.DataFrame(population_data)
+
+
+merged_data = pd.merge(df, population_df, on='Region', how='inner')
+print(filtered_sales)
+print(region_sales)
+print(merged_data)
